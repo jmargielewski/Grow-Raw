@@ -18,32 +18,98 @@ body{
 .logo{
     text-align: center;
 }
-
 nav{
+    display: flex;
+    justify-content: center;
+}
+.nav{
+    width: 90%;
     background-color: #444444;
-    text-align: center;
-    line-height: 250%;
     margin-top: 30px;
+    height: 52px;
+    border-top: 2px solid #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-nav li{
+.nav li{
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     border-right: 1px solid #bbb;
+    // padding: 10px 0;
     &:last-child{
         border-right: none;
     }
+    &:hover{
+        a{
+            background: #fff;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            color: #363b3d;
+        }
+    }
     a{
-        padding: 0 30px;
+        padding: 0 35px;
         text-decoration: none;
         color: #fff;
         display: block;
         line-height: 170%;
         &:hover{
             background: #fff;
-            border-radius: 1px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
             color: #363b3d;
         }
+    }
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+}
+
+.submenu li{
+    width: 130px;
+    display: block;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    font-size: 0.9em;
+    border: none;
+    &:first-child{
+        border-top-right-radius: 2px;
+        a{
+            border-top: none;
+        }
+    }
+    &:last-child{
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    a{
+        width: 90%;
+        display: block;
+        color: #363b3d;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid #bbb;
+        padding-left: 23px;
+        &:hover{
+            color: #afc051;
+        }
+    }
+}
+
+nav li:hover > ul{
+    display: block;
+}
+
+
+@media (max-width: 600px){
+    nav {
+        display: none;
     }
 }
 
@@ -116,6 +182,24 @@ nav li{
     .sliderButton.active{
         background-color: #afc051;
     }
+}
+
+.sliderPic{
+    transition: all 0.4s ease-in-out;
+}
+
+.sliderButton{
+    transition: all 0.6s ease-in-out;
+}
+
+@media screen and (max-width:768px){
+	.sliderWrap .sliderPictures{
+		width:90%;
+        height: 30px;
+	}
+	.sliderWrap .sliderPanelButtons{
+		width:180px;
+	}
 }
 
 .gallery{
