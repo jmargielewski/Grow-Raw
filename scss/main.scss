@@ -11,11 +11,9 @@ body{
     // display: flex;
     margin: 0 auto;
     max-width: 1200px;
-    border: 1px solid coral;
+    // border: 1px solid coral;
 }
 
-header{
-}
 
 .logo{
     text-align: center;
@@ -25,7 +23,7 @@ nav{
     background-color: #444444;
     text-align: center;
     line-height: 250%;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 nav li{
@@ -49,19 +47,84 @@ nav li{
     }
 }
 
-.slider{
-    padding-top: 2rem;
+// slider
+
+.sliderWrap{
+    // border: 1px solid darkblue;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    .sliderPictures{
+        // border: 1px solid blue;
+        width: 90%;
+        min-height: 400px;
+        position: relative;
+        .sliderPic{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .sliderPic.active{
+            opacity: 1;
+        }
+        .sliderPic.pic-1{
+            background: url("../img/Slider/slider1.jpg") center center;
+            background-size: cover;
+        }
+        .sliderPic.pic-2{
+            background: url("../img/Slider/slider2.jpg") center center;
+            background-size: cover;
+        }
+        .sliderPic.pic-3{
+            background: url("../img/Slider/slider3.jpg") center center;
+            background-size: cover;
+        }
+        .sliderPic.pic-4{
+            background: url("../img/Slider/slider4.jpg") center center;
+            background-size: cover;
+        }
+        .sliderPic.pic-5{
+            background: url("../img/Slider/slider5.jpg") center center;
+            background-size: cover;
+        }
+        .sliderPic.pic-6{
+            background: url("../img/Slider/slider6.jpg") center center;
+            background-size: cover;
+        }
+    }
+}
+
+.sliderPanelButtons{
+    width: 20%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    .sliderButton{
+        width: 10px;
+        height: 10px;
+        background-color: #888;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .sliderButton.active{
+        background-color: #afc051;
+    }
 }
 
 .gallery{
-    padding-top: 20px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     div{
         min-height: 250px;
         min-width: 250px;
-
     }
 }
 
@@ -195,22 +258,22 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 10px;
+        border-radius: 50px;
     }
     i.icon-instagram{
-        color: #c3b59b;
+        color: #fff;
         display: flex;
     }
     i.icon-facebook-squared{
-        color: #4668b3;
+        color: #fff;
         display: flex;
     }
     i.icon-youtube-squared{
-        color: #d94348;
+        color: #fff;
         display: flex;
     }
     i.icon-blogger-rect{
-        color: #124318;
+        color: #fff;
         display: flex;
     }
     p{
@@ -235,7 +298,7 @@ footer{
     li{
         display: inline-block;
         font-size: 12px;
-        line-height: 250%;
+        line-height: 150%;
         padding: 0 20px;
     }
 }
