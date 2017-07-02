@@ -17,6 +17,8 @@ body{
 
 .logo{
     text-align: center;
+    padding-top: 20px;
+    // border: 1px solid black;
 }
 nav{
     display: flex;
@@ -26,7 +28,7 @@ nav{
     width: 90%;
     background-color: #444444;
     margin-top: 30px;
-    height: 52px;
+    height: 42px;
     border-top: 2px solid #333333;
     display: flex;
     justify-content: space-around;
@@ -50,7 +52,7 @@ nav{
         }
     }
     a{
-        padding: 0 35px;
+        padding: 0 30px;
         text-decoration: none;
         color: #fff;
         display: block;
@@ -222,6 +224,17 @@ div.sq{
         &:nth-of-type(8){
         display: none;
         }
+}
+
+.sqPic1:hover,
+.sqPic2:hover,
+.sqPic3:hover,
+.sqPic4:hover,
+.sqPic5:hover,
+.sqPic6:hover,
+.sqPic7:hover,
+.sqPic8:hover{
+    opacity: 0.8; 
 }
 
 .sqPic1{

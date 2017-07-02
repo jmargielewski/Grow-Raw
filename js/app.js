@@ -4,14 +4,14 @@ $(document).ready(function(){
 
 function slider(){
     let picture = $(".sliderPic");
-    let button = $(".sliderButton");
+    let button  = $(".sliderButton");
 
     picture.first().addClass("active");
     button.first().addClass("active");
 
     button.click(function(){
-        let $this = $(this);
-        let $pic = $this.parent().children();
+        let $this    = $(this);
+        let $pic     = $this.parent().children();
         let position = $pic.index($this);
 
         button.removeClass("active").eq(position).addClass("active");
@@ -21,17 +21,18 @@ function slider(){
 
 let intervalId = setInterval(function(){
 
-    //$('.sliderPic.active').fadeOut().removeClass('active').next('.sliderPic').fadeIn().addClass('active');
+        let picture = $(".sliderPic");
+        let button  = $(".sliderButton");
 
-        let nextItem = $('.sliderPic.active').fadeOut().removeClass('active').next('.sliderPic');
+        let nextItem = $(".sliderPic.active").fadeOut().removeClass("active").next(picture);
         nextItem.fadeIn().addClass("active");
-        const index = $(".sliderPic").index(nextItem);
-        console.log(index);
-        $(".sliderButton").removeClass("active").eq(index).addClass("active");
+
+        const index = picture.index(nextItem);
+        button.removeClass("active").eq(index).addClass("active");
 
         if ( nextItem.length === 0 ) {
-            nextItem = $('.sliderPic').first();
-            $(".sliderButton").removeClass("active").eq(0).addClass("active");
+            nextItem = picture.first();
+            button.removeClass("active").eq(0).addClass("active");
         }
         nextItem.fadeIn().addClass('active');
 
