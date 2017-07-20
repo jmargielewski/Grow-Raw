@@ -40,3 +40,66 @@ let intervalId = setInterval(function(){
 
 
 //////////////////////////////////////////
+// VanilaJS
+
+const btnContact = document.getElementById("navContact");
+const btnContactClose = document.querySelector(".closeBtn");
+const contactForm = document.querySelector(".contactForm")
+
+btnContact.addEventListener("click", function(){
+    document.body.classList.add("modalShowed");
+},false);
+
+btnContactClose.addEventListener("click", function(){
+    document.body.classList.remove("modalShowed");
+},false);
+
+document.addEventListener('keyup', function( event ){
+    if ( event.keyCode === 27){
+        document.body.classList.remove("modalShowed");
+    }
+},false);
+
+contactForm.addEventListener("submit", function( event ){
+
+    const name = document.querySelector("#name");
+    const lastname = document.querySelector("#lastname");
+    const email = document.querySelector("#email");
+    const userQuestion = document.querySelector("#userQuestion");
+    const btnsDiv = document.querySelector(".btnsDiv");
+
+    let info = document.createElement('p');
+
+    contactForm.insertBefore(info, btnsDiv);
+
+    if ( name.value.length < 3 ){
+        event.preventDefault();
+        info.classList.add('errorMessage');
+        info.innerText = "Podane imię jest za krótkie";
+        console.log("Podane imię jest za krótki");
+        return;
+    } else if ( lastname.value.length < 2 ){
+        event.preventDefault();
+        info.classList.add('errorMessage');
+        info.innerText = "Podane Nazwisko jest za krótkie";
+        return;
+    } else if ( email.value.indexOf("@") === -1  && email.value.length < 3){
+        event.preventDefault();
+        info.classList.add('errorMessage');
+        info.innerText = "Błędny adres emial";
+        return;
+    } else if ( userQuestion.value.length < 1 ){
+        event.preventDefault();
+        info.classList.add('errorMessage');
+        info.innerText = "Podaj treść wiadomości";
+        return;
+    } else {
+        event.preventDefault();
+        info.classList.add('correctMessage');
+        info.innerText = "Wiadomość wysłana";
+        setTimeout(function(){
+            document.body.classList.remove("modalShowed");
+        },1000);
+        return;
+    }
+},false);

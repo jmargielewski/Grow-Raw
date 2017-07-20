@@ -10,7 +10,7 @@
     <title>Grow Raw</title>
 
 </head>
-<body class="">
+<body>
     <div id="container">
         <header>
             <div class="logo">
@@ -40,35 +40,38 @@
                 <h2>W przypadku pytań napisz do Nas:</h2>
                 <a href="info@growraw.pl">info@growraw.pl</a>
                 <form class="contactForm">
-                    <div class="row">
-                        <label for="name">Imię:</label>
-                        <input type="text" id="name" />
+                    <div class="leftForm">
+                        <div class="row">
+                            <label for="name">Imię:</label>
+                            <input type="text" id="name" />
+                        </div>
+                        <div class="row">
+                            <label for="lastname">Nazwisko:</label>
+                            <input type="text" id="lastname" />
+                        </div>
+                        <div class="row">
+                            <label for="email">Twój email:</label>
+                            <input type="email" id="email" />
+                        </div>
+                        <div class="row">
+                            <label for="subject">Wybierz temat:</label>
+                            <select name="subject" id="subject">
+                                <option value="0">wybierz</option>
+                                <option value="1">Pytanie o produkt</option>
+                                <option value="2">Pytanie o zamówienie</option>
+                                <option value="3">Problemy techniczne</option>
+                                <option value="4">Marketing i reklama</option>
+                                <option value="5">Inne</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="lastname">Nazwisko:</label>
-                        <input type="text" id="lastname" />
-                    </div>
-                    <div class="row">
-                        <label for="emial">Twój email:</label>
-                        <input type="email" id="emial" />
-                    </div>
-                    <div class="row">
-                        <label for="subject">Wybierz temat:</label>
-                        <select name="subject" id="subject">
-                            <option value="0">wybierz</option>
-                            <option value="1">Pytanie o produkt</option>
-                            <option value="2">Pytanie o zamówienie</option>
-                            <option value="3">Problemy techniczne</option>
-                            <option value="4">Marketing i reklama</option>
-                            <option value="5">Inne</option>
-                        </select>
-                    </div>
-                    <div class="row">
+                    <div class="rightForm"></div>
+                    <div class="row lastRow">
                         <label for="userQuestion">Wiadomość:</label>
-                        <textarea id="userQuestion"></textarea>
+                        <textarea cols="65" rows="5" id="userQuestion"></textarea>
                     </div>
-                    <div class="row">
-                        <button type="submit">Wyślij</button>
+                    <div class="btnsDiv">
+                        <button class="sendBtn"type="submit">Wyślij</button>
                         <button class="closeBtn">Zamknij</button>
                     </div>
                 </form>
