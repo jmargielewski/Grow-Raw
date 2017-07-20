@@ -37,3 +37,6 @@ let intervalId = setInterval(function(){
         nextItem.fadeIn().addClass('active');
 
 }, 5000);
+
+
+//////////////////////////////////////////

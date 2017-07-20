@@ -342,15 +342,6 @@ footer{
     min-height: 175px;
     width: 700px;
     margin: 0 auto;
-    p{
-        font-size: 9px;
-        color: #afc051;
-        position: absolute;
-        top:110px;
-    }
-    a{
-        text-decoration: none;
-    }
     div{
         background-color: #888;
         width: 60px;
@@ -358,32 +349,39 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50px;
-    }
-    i.icon-instagram{
-        color: #fff;
-        display: flex;
-    }
-    i.icon-facebook-squared{
-        color: #fff;
-        display: flex;
-    }
-    i.icon-youtube-squared{
-        color: #fff;
-        display: flex;
-    }
-    i.icon-blogger-rect{
-        color: #fff;
-        display: flex;
-    }
-    p{
-        // position: absolute;
+        border-radius: 50%;
+        a{
+            text-decoration: none;
+            // position: relative;
+            i.icon-instagram{
+                color: #fff;
+                display: flex;
+            }
+            i.icon-facebook-squared{
+                color: #fff;
+                display: flex;
+            }
+            i.icon-youtube-squared{
+                color: #fff;
+                display: flex;
+            }
+            i.icon-blogger-rect{
+                color: #fff;
+                display: flex;
+            }
+            p{
+                font-size: 9px;
+                color: #afc051;
+                position: absolute;
+                top: 110px;
+            }
+        }
     }
 }
 
 .footerMenu{
     border-top: 1px solid #afc051;
-    background-color:#bbb;
+    background-color: #bbb;
     color: #fff;
     text-align: center;
     span{

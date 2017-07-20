@@ -29,13 +29,51 @@
                                 </ul>
                         </li><!--
                         !--><li><a href="#">O Nas</a></li><!--
-                        !--><li><a href="#">Kontakt</a></li><!--
+                        !--><li><a href="#" id="navContact">Kontakt</a></li><!--
                         !--><li><a href="#">Zassady Zakupów</a></li><!--
                         !--><li><a href="#">Wydarzenia</a></li><!--
                         !--><li><a href="#">Współpraca</a></li>
                     </ol>
                 </div>
             </nav>
+            <div class="contactModal">
+                <h2>Pozostajemy do Twojej dyspozycji. W przypadku pytań napisz do Nas:</h2>
+                <h3>info@growraw.pl</h3>
+                <button>Zamknij</button>
+                <form class="contactForm">
+                    <div class="row">
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" />
+                    </div>
+                    <div class="row">
+                        <label for="lastname">Nazwisko:</label>
+                        <input type="text" id="lastname" />
+                    </div>
+                    <div class="row">
+                        <label for="emial">Twój email:</label>
+                        <input type="email" id="emial" />
+                    </div>
+                    <div class="row">
+                        <label>Wybierz temat:
+                            <select name="subject" id="subject">
+                                <option value="0">wybierz</option>
+                                <option value="1">Pytanie o produkt</option>
+                                <option value="2">Pytanie o zamówienie</option>
+                                <option value="3">Problemy techniczne</option>
+                                <option value="4">Marketing i reklama</option>
+                                <option value="5">Inne</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label for="userQuestion">Wiadomość:</label>
+                        <textarea id="userQuestion"></textarea>
+                    </div>
+                    <div class="row">
+                        <button type="submit">Wyślij</button>
+                    </div>
+                </form>
+            </div>
         </header>
         <section>
             <div class="sliderWrap">
