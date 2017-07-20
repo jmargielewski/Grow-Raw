@@ -26,7 +26,7 @@ nav{
 }
 .nav{
     width: 90%;
-    background-color: #444444;
+    background-image: url("../img/concrete_wall.png");
     margin-top: 30px;
     height: 42px;
     border-top: 2px solid #333333;
@@ -108,12 +108,78 @@ nav li:hover > ul{
     display: block;
 }
 
-
 @media (max-width: 600px){
     nav {
         display: none;
     }
 }
+
+.contactForm label{
+    display: block;
+}
+
+.contactForm .row{
+    margin-bottom: 15px;
+}
+
+body::after{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+}
+
+body.modalShowed::after{
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.modal{
+    /* Background pattern from Subtle Patterns */
+    background-image: url("../img/concrete_wall.png");
+    color: #fff;
+    width: 600px;
+    padding: 20px;
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-30%);
+    opacity: 0;
+    h2{
+        text-align: center;
+        line-height: 25px;
+        letter-spacing: 2px;
+        font-size: 20px;
+    }
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 40px;
+        text-decoration: none;
+        color: #fff;
+        &:before{
+            content: "";
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            background-image: url("../img/mail.png");
+            background-size: contain;
+            margin-right: 5px;
+        }
+    }
+}
+
+.modalShowed .modal{
+    opacity: 1;
+    z-index: 999;
+}
+
 
 // slider
 

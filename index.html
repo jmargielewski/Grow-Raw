@@ -10,7 +10,7 @@
     <title>Grow Raw</title>
 
 </head>
-<body>
+<body class="">
     <div id="container">
         <header>
             <div class="logo">
@@ -36,10 +36,9 @@
                     </ol>
                 </div>
             </nav>
-            <div class="contactModal">
-                <h2>Pozostajemy do Twojej dyspozycji. W przypadku pytań napisz do Nas:</h2>
-                <h3>info@growraw.pl</h3>
-                <button>Zamknij</button>
+            <div class="modal contactModal">
+                <h2>W przypadku pytań napisz do Nas:</h2>
+                <a href="info@growraw.pl">info@growraw.pl</a>
                 <form class="contactForm">
                     <div class="row">
                         <label for="name">Imię:</label>
@@ -54,16 +53,15 @@
                         <input type="email" id="emial" />
                     </div>
                     <div class="row">
-                        <label>Wybierz temat:
-                            <select name="subject" id="subject">
-                                <option value="0">wybierz</option>
-                                <option value="1">Pytanie o produkt</option>
-                                <option value="2">Pytanie o zamówienie</option>
-                                <option value="3">Problemy techniczne</option>
-                                <option value="4">Marketing i reklama</option>
-                                <option value="5">Inne</option>
-                            </select>
-                        </label>
+                        <label for="subject">Wybierz temat:</label>
+                        <select name="subject" id="subject">
+                            <option value="0">wybierz</option>
+                            <option value="1">Pytanie o produkt</option>
+                            <option value="2">Pytanie o zamówienie</option>
+                            <option value="3">Problemy techniczne</option>
+                            <option value="4">Marketing i reklama</option>
+                            <option value="5">Inne</option>
+                        </select>
                     </div>
                     <div class="row">
                         <label for="userQuestion">Wiadomość:</label>
@@ -71,6 +69,7 @@
                     </div>
                     <div class="row">
                         <button type="submit">Wyślij</button>
+                        <button class="closeBtn">Zamknij</button>
                     </div>
                 </form>
             </div>
