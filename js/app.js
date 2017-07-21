@@ -96,6 +96,7 @@ contactForm.addEventListener("submit", function( event ){
         return;
     } else {
         event.preventDefault();
+        // 
         info.classList.add('correctMessage');
         info.innerText = "Wiadomość wysłana";
         setTimeout(function(){

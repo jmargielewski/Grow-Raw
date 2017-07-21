@@ -3,7 +3,7 @@
 
 body{
     /* Background pattern from Subtle Patterns */
-    background: url('../img/concrete_seamless.png');
+    background: url('../img/backgrounds/concrete_seamless.png');
     font-family: 'Lato', sans-serif;
 }
 
@@ -12,18 +12,21 @@ body{
     max-width: 1200px;
 }
 
+//////////////////////////////////HEADER//////////////////////////////////
 
 .logo{
     text-align: center;
     padding-top: 20px;
 }
+
+//////////////////////////////////NAV//////////////////////////////////
 nav{
     display: flex;
     justify-content: center;
 }
 .nav{
     width: 90%;
-    background-image: url("../img/concrete_wall.png");
+    background-image: url("../img/backgrounds/concrete_wall.png");
     margin-top: 30px;
     height: 42px;
     border-top: 2px solid #333333;
@@ -109,6 +112,7 @@ nav li:hover > ul{
         display: none;
     }
 }
+//////////////////////////////////FORM//////////////////////////////////
 
 .contactForm label{
     display: block;
@@ -141,7 +145,7 @@ body.modalShowed::after{
 
 .modal{
     /* Background pattern from Subtle Patterns */
-    background-image: url("../img/concrete_wall.png");
+    background-image: url("../img/backgrounds/concrete_wall.png");
     color: #fff;
     width: 600px;
     padding: 30px;
@@ -201,7 +205,7 @@ body.modalShowed::after{
 }
 .rightForm{
     float: left;
-    background-image: url("../img/img_form.jpg");
+    background-image: url("../img/Form.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     width: 300px;
@@ -219,8 +223,26 @@ body.modalShowed::after{
     color: #008000;
     margin-bottom: 15px;
 }
+//////////////////////////////////ABOUT-US//////////////////////////////////
 
-// slider
+.boxImgAboutUs{
+    margin: 45px auto;
+    background-image: url("../img/about.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 1080px;
+    height: 500px;
+}
+.boxTextAboutUs{
+    margin: 45px auto;
+    text-align: center;
+    width: 1080px;
+}
+.textAboutUs{
+    padding: 40px;
+}
+
+//////////////////////////////////SLIDER//////////////////////////////////
 
 .sliderWrap{
     // border: 1px solid darkblue;
@@ -308,6 +330,8 @@ body.modalShowed::after{
 		width:180px;
 	}
 }
+
+//////////////////////////////////GALLERY/////////////////////////////////
 
 .gallery{
     display: flex;
@@ -418,7 +442,7 @@ div.sq{
     }
 }
 
-
+//////////////////////////////////FOOTER//////////////////////////////////
 
 footer{
     color: #bbb;
@@ -429,7 +453,7 @@ footer{
 
 .footerSocials{
     // background-color:#444444;
-    background-image: url("../img/concrete_wall.png");
+    background-image: url("../img/backgrounds/concrete_wall.png");
     color: #fff;
     h2{
         color: #bbb;
