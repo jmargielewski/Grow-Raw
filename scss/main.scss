@@ -428,12 +428,14 @@ footer{
 }
 
 .footerSocials{
-    background-color:#444444;
+    // background-color:#444444;
+    background-image: url("../img/concrete_wall.png");
     color: #fff;
     h2{
         color: #bbb;
         text-align: center;
         position: absolute;
+        // word-spacing: 3px;
         left: 50%;
         width: 400px;
         margin-left: -200px;
@@ -455,12 +457,13 @@ footer{
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        position: relative;
         a{
             text-decoration: none;
-            // position: relative;
             i.icon-instagram{
                 color: #fff;
                 display: flex;
+
             }
             i.icon-facebook-squared{
                 color: #fff;
@@ -475,10 +478,13 @@ footer{
                 display: flex;
             }
             p{
+                text-align: center;
                 font-size: 9px;
                 color: #afc051;
                 position: absolute;
-                top: 110px;
+                width: 100px;
+                top: 50px;
+                margin-left: (-45%);
             }
         }
     }
@@ -493,15 +499,13 @@ footer{
         font-size: 10px;
         color: #444444;
     }
-    ol{
-        padding-top: 10px;
-        display: flex;
-        justify-content: center;
-    }
-    li{
-        display: inline-block;
-        font-size: 12px;
-        line-height: 150%;
-        padding: 0 20px;
+    ol {
+        max-height: 30px;
+        li{
+            display: inline-block;
+            font-size: 12px;
+            padding: 0 20px;
+            color: #fff;
+        }
     }
 }

@@ -44,7 +44,7 @@ let intervalId = setInterval(function(){
 
 const btnContact = document.getElementById("navContact");
 const btnContactClose = document.querySelector(".closeBtn");
-const contactForm = document.querySelector(".contactForm")
+const contactForm = document.querySelector(".contactForm");
 
 btnContact.addEventListener("click", function(){
     document.body.classList.add("modalShowed");
@@ -59,6 +59,7 @@ document.addEventListener('keyup', function( event ){
         document.body.classList.remove("modalShowed");
     }
 },false);
+
 
 contactForm.addEventListener("submit", function( event ){
 
