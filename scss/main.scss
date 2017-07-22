@@ -241,7 +241,24 @@ body.modalShowed::after{
 .textAboutUs{
     padding: 40px;
 }
+//////////////////////////////////COOPERATION//////////////////////////////////
 
+.boxImgCooperation{
+    margin: 0 auto;
+    background-image: url("../img/cooperation.png");
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 1024px;
+    min-height: 196px;
+}
+.boxTextCooperation{
+    margin: 0 auto;
+    text-align: center;
+    width: 1080px;
+}
+.textCooperation{
+    padding: 40px;
+}
 //////////////////////////////////SLIDER//////////////////////////////////
 
 .sliderWrap{

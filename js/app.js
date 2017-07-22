@@ -96,7 +96,7 @@ contactForm.addEventListener("submit", function( event ){
         return;
     } else {
         event.preventDefault();
-        // 
+        //
         info.classList.add('correctMessage');
         info.innerText = "Wiadomość wysłana";
         setTimeout(function(){
@@ -104,4 +104,5 @@ contactForm.addEventListener("submit", function( event ){
         },1000);
         return;
     }
+
 },false);
