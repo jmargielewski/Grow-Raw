@@ -4,7 +4,7 @@
 body{
     /* Background pattern from Subtle Patterns */
     background: url('../img/backgrounds/concrete_seamless.png');
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
 }
 
 #container{
@@ -439,7 +439,7 @@ div.sq{
     width: 100%;
     padding: 6px 0;
     color: #fff;
-    background: #444444;
+    background-image: url("../img/backgrounds/concrete_wall.png");
     outline: none;
     border: none;
     margin-top: 3px;
