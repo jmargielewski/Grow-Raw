@@ -39,6 +39,7 @@ nav{
     display: inline-block;
     font-size: 14px;
     border-right: 1px solid #bbb;
+    @include navSideBorder(right, 1px, #bbb);
     &:last-child{
         border-right: none;
     }
@@ -98,7 +99,7 @@ nav{
         border-top: 1px solid #bbb;
         padding-left: 23px;
         &:hover{
-            color: #afc051;
+            color: $detColor;
         }
     }
 }
@@ -168,7 +169,7 @@ body.modalShowed::after{
         align-items: center;
         line-height: 40px;
         text-decoration: none;
-        border-bottom: 1px solid #afc051;
+        border-bottom: 1px solid $detColor;
         color: #fff;
         margin-bottom: 10px;
         &:before{
@@ -180,6 +181,10 @@ body.modalShowed::after{
             background-size: contain;
             margin-right: 5px;
         }
+    }
+    input:focus, textarea:focus, select:focus{
+        border: 2px solid $detColor;
+        border-radius: 2px;
     }
     input, select{
      width: 200px;
@@ -326,7 +331,7 @@ body.modalShowed::after{
         cursor: pointer;
     }
     .sliderButton.active{
-        background-color: #afc051;
+        background-color: $detColor;
     }
 }
 
@@ -384,49 +389,49 @@ div.sq{
 }
 
 .sqPic1{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic1.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic2{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic2.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic3{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic3.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic4{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic4.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic5{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic5.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic6{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic6.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic7{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic7.jpg");
     background-size: cover;
     background-position: center;
 }
 .sqPic8{
-    border: 1px solid #afc051;
+    border: 1px solid $detColor;
     background-image: url("../img/Gallery/pic8.jpg");
     background-size: cover;
     background-position: center;
@@ -444,7 +449,7 @@ div.sq{
     border: none;
     margin-top: 3px;
     i{
-        color:#afc051;
+        color:$detColor;
     }
     span{
         border-left: 1px solid #fff;
@@ -521,7 +526,7 @@ footer{
             p{
                 text-align: center;
                 font-size: 9px;
-                color: #afc051;
+                color: $detColor;
                 position: absolute;
                 width: 100px;
                 top: 50px;
@@ -532,7 +537,7 @@ footer{
 }
 
 .footerMenu{
-    border-top: 1px solid #afc051;
+    border-top: 1px solid $detColor;
     background-color: #bbb;
     color: #fff;
     text-align: center;

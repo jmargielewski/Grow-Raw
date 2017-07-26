@@ -5,3 +5,9 @@
   clear: both;
   content: "";
 }
+
+$detColor: #afc051;
+
+@mixin navSideBorder($side, $size, $color){
+    border-#{$side}: $size solid $color;
+}

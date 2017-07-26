@@ -69,7 +69,17 @@ contactForm.addEventListener("submit", function( event ){
     const userQuestion = document.querySelector("#userQuestion");
     const btnsDiv = document.querySelector(".btnsDiv");
 
+    const btnClose = document.querySelector(".closeBtn");
+
     let info = document.createElement('p');
+
+    // btnClose.addEventListener("click", function (){
+    //     name.value = "";
+    //     lastname.value = "";
+    //     email.value = "";
+    //     userQuestion.value = "";
+    //     contactForm.removeChild(info);
+    // },false)
 
     contactForm.insertBefore(info, btnsDiv);
 
@@ -77,7 +87,6 @@ contactForm.addEventListener("submit", function( event ){
         event.preventDefault();
         info.classList.add('errorMessage');
         info.innerText = "Podane imię jest za krótkie";
-        console.log("Podane imię jest za krótki");
         return;
     } else if ( lastname.value.length < 2 ){
         event.preventDefault();
