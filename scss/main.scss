@@ -100,8 +100,19 @@ nav{
         padding-left: 23px;
         &:hover{
             color: $detColor;
+            .submenuSizes{
+                display: inline-block;
+            }
         }
     }
+}
+
+.submenuSizes{
+    position: absolute;
+    top: 0;
+    left:130px;
+    font-size: 0.9em;
+    display: none;
 }
 
 nav li:hover > ul{
