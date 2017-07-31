@@ -115,3 +115,18 @@ contactForm.addEventListener("submit", function( event ){
     }
 
 },false);
+
+
+let pictures = document.querySelectorAll(".sqPic");
+
+[...pictures].forEach( function( picture ){
+    picture.addEventListener("click", function(){
+        document.body.classList.add('modalGalleryShowed');
+    },false)
+})
+
+document.addEventListener('keyup', function( event ){
+    if ( event.keyCode === 27){
+        document.body.classList.remove("modalGalleryShowed");
+    }
+},false);
