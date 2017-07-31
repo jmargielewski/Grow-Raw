@@ -485,6 +485,40 @@ div.sq{
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+.modalGalleryCloseBtn{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    background-image: url("../img/X.png");
+    background-size: cover;
+    opacity: 0.5;
+}
+.modalGalleryNextBtn{
+    width: 150px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    color: $detColor;
+    position: absolute;
+    top: 500px;
+    right: 100px;
+}
+
+.modalGalleryPrevBtn{
+    width: 150px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: $detColor;
+    position: absolute;
+    top: 500px;
+    left: 100px;
+}
 
 
 //////////////////////////////////FOOTER//////////////////////////////////
@@ -497,14 +531,12 @@ footer{
 }
 
 .footerSocials{
-    // background-color:#444444;
     background-image: url("../img/backgrounds/concrete_wall.png");
     color: #fff;
     h2{
         color: #bbb;
         text-align: center;
         position: absolute;
-        // word-spacing: 3px;
         left: 50%;
         width: 400px;
         margin-left: -200px;

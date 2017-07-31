@@ -46,6 +46,11 @@ const btnContact = document.getElementById("navContact");
 const btnContactClose = document.querySelector(".closeBtn");
 const contactForm = document.querySelector(".contactForm");
 
+const pictures = document.querySelectorAll(".sqPic");
+
+
+// modalForm
+
 btnContact.addEventListener("click", function(){
     document.body.classList.add("modalShowed");
 },false);
@@ -117,27 +122,41 @@ contactForm.addEventListener("submit", function( event ){
 },false);
 
 
-let pictures = document.querySelectorAll(".sqPic");
+// modalGallery
 
 [...pictures].forEach( function( picture ){
     picture.addEventListener("click", function(){
-        document.body.classList.add('modalGalleryShowed');
-        let modal = document.createElement('div');
-        let btnGalleryClose = document.createElement('button');
-        let btnGalleryNext = document.createElement('button');
-        let btnGalleryPrev = document.createElement('button');
+        document.body.classList.add("modalGalleryShowed");
+        let modal = document.createElement("div");
+        let modalGalleryCloseBtn = document.createElement("button");
+        let modalGalleryNextBtn = document.createElement("button");
+        let modalGalleryPrevBtn = document.createElement("button");
 
-        modal.classList.add('modalGallery');
-        modal.appendChild(btnGalleryClose);
-        modal.appendChild(btnGalleryNext);
-        modal.appendChild(btnGalleryPrev);
+        modal.classList.add("modalGallery");
+        modalGalleryCloseBtn.classList.add("modalGalleryCloseBtn");
+        modalGalleryNextBtn.classList.add("modalGalleryNextBtn");
+        modalGalleryPrevBtn.classList.add("modalGalleryPrevBtn");
+
+        modalGalleryNextBtn.innerHTML = '&gt;';
+        modalGalleryPrevBtn.innerHTML = '&lt;';
+
+        modal.appendChild(modalGalleryCloseBtn);
+        modal.appendChild(modalGalleryNextBtn);
+        modal.appendChild(modalGalleryPrevBtn);
         document.body.appendChild(modal);
+
 
     },false)
 })
 
-document.addEventListener('keyup', function( event ){
-    if ( event.keyCode === 27){
-        document.body.classList.remove("modalGalleryShowed");
-    }
-},false);
+
+
+
+
+//  late
+
+// document.addEventListener('keyup', function( event ){
+//     if ( event.keyCode === 27){
+//         document.body.classList.remove("modalGalleryShowed");
+//     }
+// },false);
