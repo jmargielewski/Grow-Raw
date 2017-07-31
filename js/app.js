@@ -122,6 +122,17 @@ let pictures = document.querySelectorAll(".sqPic");
 [...pictures].forEach( function( picture ){
     picture.addEventListener("click", function(){
         document.body.classList.add('modalGalleryShowed');
+        let modal = document.createElement('div');
+        let btnGalleryClose = document.createElement('button');
+        let btnGalleryNext = document.createElement('button');
+        let btnGalleryPrev = document.createElement('button');
+
+        modal.classList.add('modalGallery');
+        modal.appendChild(btnGalleryClose);
+        modal.appendChild(btnGalleryNext);
+        modal.appendChild(btnGalleryPrev);
+        document.body.appendChild(modal);
+
     },false)
 })
 
