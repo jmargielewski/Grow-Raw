@@ -125,21 +125,44 @@ contactForm.addEventListener("submit", function( event ){
 // modalGallery
 
 [...pictures].forEach( function( picture ){
-    picture.addEventListener("click", function(){
+    picture.addEventListener("click", function( event ){
         document.body.classList.add("modalGalleryShowed");
         let modal = document.createElement("div");
+        let modalGelleryPic = document.createElement("div");
         let modalGalleryCloseBtn = document.createElement("button");
         let modalGalleryNextBtn = document.createElement("button");
         let modalGalleryPrevBtn = document.createElement("button");
 
         modal.classList.add("modalGallery");
+        modalGelleryPic.classList.add("modalGelleryPic");
         modalGalleryCloseBtn.classList.add("modalGalleryCloseBtn");
         modalGalleryNextBtn.classList.add("modalGalleryNextBtn");
         modalGalleryPrevBtn.classList.add("modalGalleryPrevBtn");
 
-        modalGalleryNextBtn.innerHTML = '&gt;';
-        modalGalleryPrevBtn.innerHTML = '&lt;';
 
+        if ( event.target.className === "sqPic1 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic1.jpg)';
+        } else if ( event.target.className === "sqPic2 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic2.jpg)';
+        } else if ( event.target.className === "sqPic3 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic3.jpg)';
+        } else if ( event.target.className === "sqPic4 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic4.jpg)';
+        } else if ( event.target.className === "sqPic5 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic5.jpg)';
+        } else if ( event.target.className === "sqPic6 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic6.jpg)';
+        } else if ( event.target.className === "sqPic7 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic7.jpg)';
+        } else if ( event.target.className === "sqPic8 sqPic" ){
+            modalGelleryPic.style.backgroundImage = 'url(./img/Gallery/pic8.jpg)';
+        }
+
+
+        modalGalleryNextBtn.innerHTML = "&gt;";
+        modalGalleryPrevBtn.innerHTML = "&lt;";
+
+        modal.appendChild(modalGelleryPic);
         modal.appendChild(modalGalleryCloseBtn);
         modal.appendChild(modalGalleryNextBtn);
         modal.appendChild(modalGalleryPrevBtn);

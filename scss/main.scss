@@ -478,16 +478,27 @@ div.sq{
 
 .modalGallery{
     background-image: url("../img/backgrounds/concrete_wall.png");
-    width: 600px;
-    height: 600px;
+    width: 530px;
+    height: 630px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+.modalGelleryPic{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 500px;
+    height: 430px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40%);
+}
 .modalGalleryCloseBtn{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     position: fixed;
@@ -505,7 +516,7 @@ div.sq{
     font-size: 30px;
     color: $detColor;
     position: absolute;
-    top: 500px;
+    top: 550px;
     right: 100px;
 }
 
@@ -516,7 +527,7 @@ div.sq{
     font-size: 30px;
     color: $detColor;
     position: absolute;
-    top: 500px;
+    top: 550px;
     left: 100px;
 }
 
