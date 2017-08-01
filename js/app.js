@@ -124,6 +124,8 @@ contactForm.addEventListener("submit", function( event ){
 
 // modalGallery
 
+
+
 [...pictures].forEach( function( picture ){
     picture.addEventListener("click", function( event ){
         document.body.classList.add("modalGalleryShowed");
@@ -168,6 +170,10 @@ contactForm.addEventListener("submit", function( event ){
         modal.appendChild(modalGalleryPrevBtn);
         document.body.appendChild(modal);
 
+        modalGalleryCloseBtn.addEventListener("click", function(){
+            document.body.classList.remove("modalGalleryShowed");
+            document.body.removeChild(modal);
+        },false)
 
     },false)
 })
